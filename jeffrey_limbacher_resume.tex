@@ -16,6 +16,7 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
+\usepackage[backend=bibtex]{biblatex}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -43,9 +44,9 @@
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
+\newcommand{\resumeItem}[1]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    {#1 \vspace{-2pt}}
   }
 }
 
@@ -57,7 +58,7 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{\textbf{#1 --}\hspace{-7pt}}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -66,16 +67,19 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+%------------------------------
+%\addbibresource{citations.bib} 
+
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-  \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+  \textbf{\href{jeffreylimbacher.me}{\Large Jeffrey Limbacher}} & Email: \href{mailto:jeffreylimbacher@gmail.com}{jeffreylimbacher@gmail.com}\\
+  \href{jeffreylimbacher.me}{jeffreylimbacher.me} & Mobile: (818) 285-9179\\
+  Github: \href{https://github.com/JeffreyLimbacher}{github.com/JeffreyLimbacher} & \\
 \end{tabular*}
 
 
@@ -83,11 +87,11 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Master of Science in Computer Science;  GPA: 4.00}{Aug. 2012 -- Dec. 2013}
+      {California State University, Northridge}{Northridge, CA}
+      {Master of Science in Applied Mathematics;  GPA: 3.93}{Jan. 2016 -- Aug. 2018}
     \resumeSubheading
-      {Birla Institute of Technology and Science}{Pilani, India}
-      {Bachelor of Engineering in Electrical and Electronics;  GPA: 3.66 (9.15/10.0)}{Aug. 2008 -- July. 2012}
+      {California State University, Northridge}{Northridge, CA}
+      {Bachelor of Science in Computer Science and Mathematics;  GPA: 3.97}{Aug. 2010 -- Dec. 2015}
   \resumeSubHeadingListEnd
 
 
@@ -96,73 +100,84 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Google}{Mountain View, CA}
-      {Software Engineer}{Oct 2016 - Present}
+      {Legalzoom}{Glendale, CA}
+      {Statistical Analyst}{Mar. 2018 -- Present}
       \resumeItemListStart
-        \resumeItem{Tensorflow}
-          {TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models. Worked on APIs and performance for training models on Tensor Processing Units (TPU).}
-        \resumeItem{Apache Beam}
-          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+        \resumeItem
+          {Deploy Tableau A/B testing dashboards to enable stakeholders to monitor/review experiments.}
+        \resumeItem
+          {Dashboards implement statistical tests for conversion and package distribution.}
+        \resumeItem
+          {Automated analyses using Python and BigQuery to help solve common analysis requests and run statistical tests.}
+        \resumeItem
+      	  {Evaluate novel methods of inference in the context of A/B testing and web analytics.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Coursera}{Mountain View, CA}
-      {Senior Software Engineer}{Jan 2014 - Oct 2016}
+      {ERC, Inc.}{Edwards Air Force Base}
+      {Summer Intern}{Jun. 2017 -- Aug. 2017}
       \resumeItemListStart
-        \resumeItem{Notifications}
-          {Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-        \resumeItem{Nostos}
-          {Bulk data processing and injection service from Hadoop to Cassandra and provides a thin REST layer on top for serving offline computed data online.}
-        \resumeItem{Workflows}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-        \resumeItem{Data Collection}
-          {Designed the internal survey and crowd sourcing platform which allowed for creating various tasks for crowd sourcing or embedding surveys across the Coursera platform.}
-        \resumeItem{Dev Environment}
-          {Analytics environment based on docker and AWS, standardized the python and R dependencies. Wrote the core libraries that are shared by all data scientists.}
-        \resumeItem{Data Warehousing}
-          {Setup, schema design and management of Amazon Redshift. Built an internal app for access to the data using a web interface. Dataduct integration for daily ETL injection into Redshift.}
-        \resumeItem{Recommendations}
-          {Core service for all recommendation systems at Coursera, currently used on the homepage and throughout the content discovery process. Worked on both offline training and online serving.}
-        \resumeItem{Content Discovery}
-          {Improved content discovery by building a new onboarding experience on coursera. Using this to personalize the search and browse experience. Also worked on ranking and indexing improvements.}
-        \resumeItem{Course Dashboards}
-          {Instructor dashboards and learner surveying tools, which helped instructors run their class better by providing data on Assignments and Learner Activity.}
+        \resumeItem
+			{Implemented, benchmarked, and presented findings of a Multigrid Quadtree Poisson solver using MATLAB.}
+        \resumeItem
+			{Developed a MATLAB visualization dashboard that displayed Hall thruster time series and phase plots.}
+		\resumeItem	
+			{Wrote and tested parallel C++ \href{https://en.wikipedia.org/wiki/Particle-in-cell}{PIC} octree mesh construction. Morton encoding to bin particles within the octree.}
+		\resumeItem
+   			{Implemented \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4592974/}{Cross-Convergent Mapping} using MATLAB to analyze Hall thruster time series data.}
+   		\resumeItem
+   			{Wrote MATLAB script to deduce magic numbers for Morton encoding based on dimensions of interleaved vectors.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {Lucena Research}{Atlanta, GA}
-      {Data Scientist}{Summer 2012 and 2013}
-      \resumeItemListStart
-        \resumeItem{Portfolio Management}
-          {Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-        \resumeItem{QuantDesk}
-          {Python backend for a web application used by hedge fund managers for portfolio management.}
+      {California State University, Northridge}{Northridge, CA}
+      {Graduate Research Assistant}{Aug. 2016 -- Jan. 2018}
+       \resumeItemListStart
+        \resumeItem
+			{Submitted a paper which described a method for calculating the Boltzmann collision integral using the DFT.}
+		\resumeItem	
+			{Implemented 3 novel numerical approaches using Intel Fortran with OpenMP and MPI.}
+		\resumeItem
+			{Used \href{https://slurm.schedmd.com/}{SLURM} to batch jobs on HPCs using SSH.}
+		\resumeItem
+   			{Gather results from numerical simulations and create visualizations of results using Excel and MATLAB.}
       \resumeItemListEnd
 
+
     \resumeSubheading
-      {Georgia Institute of Technology}{Atlanta, GA}
-      {Research and Teaching Assistant}{Jan 2012 - Dec 2013}
+      {Human Automation Teaming Solutions, Inc.}{Canoga Park, CA}
+      {Software Engineer}{Jun. 2014 -- Jun. 2016}
       \resumeItemListStart
-        \resumeItem{Research Assistant - Machine Learning}
-          {Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-        \resumeItem{Teaching Assistant - Computational Investing}
-          {The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
+        \resumeItem{Worked on a 3-person team that designed and implemented a multi-UAV ground control station in C++.}
+        \resumeItem{Implemented a quaternion-based aircraft simulation (\href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.50.7824&rep=rep1&type=pdf}{NPSNET}) with \href{https://en.wikipedia.org/wiki/PID_controller}{PID controller} and autopilot.}
+		\resumeItem{Interfaced with the customer to report progress, illicit new requirements, and gather feedback.}
+		\resumeItem{Used Python to scrape STANAG 4586 data structure definitions from a PDF and output C++ class files.}
+		\resumeItem{Maintained requirements document, software design diagrams, and user guide for the software.}
+		\resumeItem{Implemented Q-Learning in C++ to help a simulated commercial aircraft avoid airspace collisions.}
+
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
+%-----------PUBLICATIONS/TALKS-----------------
+\section{PUBLICATIONS/TALKS}
+
+%TODO Move this to a bib citation or something cooler
+\hangindent=.7cm
+Alexander Alekseenko, \textbf{Jeffrey Limbacher}. \textit{Evaluating High Order Discontinuous Galerkin Discretization of the Boltzmann Collision Integral in $O(N^2)$ Operations Using the Discrete Fourier Transform}. In: \textit{ArXiv e-prints} (Jan. 2018). \href{https://arxiv.org/abs/1801.05892}{arXiv:1801.05892 \texttt{[math.NA]}}.
+\\
+\vspace{5pt}
+\hangindent=.7cm
+\textbf{Jeffrey Limbacher}, Alexander Alekseenko. (2018, July 22) \textit{Evaluating High Order Discontinuous Galerkin Discretizations of the Boltzmann Collision Integral in $O(N^2)$ Operations Using the Discrete Fourier Transform}. Presented at the 13th World Congress in Computational Mechanics., New York City, New York.
 
 %-----------PROJECTS-----------------
-\section{Projects}
+\section{Awards}
   \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  	\resumeSubItem{Leslie and Terry Cutler Scholarship}{Awarded to students showing promise within their field.}
+  	\resumeSubItem{CSUN Datajam}{Best Reproducible Research.}
+    \resumeSubItem{Outstanding Graduating Senior}{Awarded by the Mathematics Department.}
+    \resumeSubItem{Dean's List}
+      {Awarded every semester when meeting minimum unit requirements.}  
   \resumeSubHeadingListEnd
 
 %
