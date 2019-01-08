@@ -46,12 +46,12 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -103,14 +103,14 @@
       {Legalzoom}{Glendale, CA}
       {Statistical Analyst}{Mar. 2018 -- Present}
       \resumeItemListStart
+       \resumeItem
+          {Used Python and SQL/BigQuery to automate analyses, run statistical tests, and generate visualizations.}
+       \resumeItem
+          {Developed Bayesian model to forecast subscription revenue for A/B test in Python with uncertainty information.}
+       \resumeItem
+      	  {Used R to create counter-factuals when A/B testing was not available using time series.}
         \resumeItem
-          {Deploy Tableau A/B testing dashboards to enable stakeholders to monitor/review experiments.}
-        \resumeItem
-          {Dashboards implement statistical tests for conversion and package distribution.}
-        \resumeItem
-          {Automated analyses using Python and BigQuery to help solve common analysis requests and run statistical tests.}
-        \resumeItem
-      	  {Evaluate novel methods of inference in the context of A/B testing and web analytics.}
+          {Develop Tableau dashboards for monitoring A/B tests and perform automated statistical tests (t-test, chi-square).}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -122,11 +122,11 @@
         \resumeItem
 			{Developed a MATLAB visualization dashboard that displayed Hall thruster time series and phase plots.}
 		\resumeItem	
-			{Wrote and tested parallel C++ \href{https://en.wikipedia.org/wiki/Particle-in-cell}{PIC} octree mesh construction. Morton encoding to bin particles within the octree.}
+			{Wrote and tested parallel C++ \href{https://en.wikipedia.org/wiki/Particle-in-cell}{PIC} octree mesh construction. Used \href{https://en.wikipedia.org/wiki/Z-order_curve\#Coordinate_values}{Morton encoding} to bin particles.}
 		\resumeItem
-   			{Implemented \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4592974/}{Cross-Convergent Mapping} using MATLAB to analyze Hall thruster time series data.}
+   			{Implemented vectorized \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4592974/}{Cross-Convergent Mapping} using MATLAB to analyze Hall thruster time series data.}
    		\resumeItem
-   			{Wrote MATLAB script to deduce magic numbers for Morton encoding based on dimensions of interleaved vectors.}
+   			{Wrote MATLAB script to deduce \href{https://en.wikipedia.org/wiki/Magic_number_(programming)\#Unnamed_numerical_constants}{magic numbers} for Morton encoding based on dimensions of interleaved vectors.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -134,13 +134,13 @@
       {Graduate Research Assistant}{Aug. 2016 -- Jan. 2018}
        \resumeItemListStart
         \resumeItem
-			{Submitted a paper which described a method for calculating the Boltzmann collision integral using the DFT.}
+			{Published paper describing method for calculating the DG-discretized Boltzmann collision integral with the DFT.}
 		\resumeItem	
-			{Implemented 3 novel numerical approaches using Intel Fortran with OpenMP and MPI.}
-		\resumeItem
-			{Used \href{https://slurm.schedmd.com/}{SLURM} to batch jobs on HPCs using SSH.}
+			{Used Intel Fortran with OpenMP/MPI to implement numerical methods. Used C++ for H-matrix approximation.}
 		\resumeItem
    			{Gather results from numerical simulations and create visualizations of results using Excel and MATLAB.}
+   		\resumeItem
+			{Used \href{https://slurm.schedmd.com/}{SLURM}/SSH to batch jobs on HPCs.}
       \resumeItemListEnd
 
 
@@ -148,13 +148,12 @@
       {Human Automation Teaming Solutions, Inc.}{Canoga Park, CA}
       {Software Engineer}{Jun. 2014 -- Jun. 2016}
       \resumeItemListStart
-        \resumeItem{Worked on a 3-person team that designed and implemented a multi-UAV ground control station in C++.}
+        \resumeItem{Worked on a 3-person team that designed and implemented a multi-UAV ground control station in C++/Qt.}
         \resumeItem{Implemented a quaternion-based aircraft simulation (\href{http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.50.7824&rep=rep1&type=pdf}{NPSNET}) with \href{https://en.wikipedia.org/wiki/PID_controller}{PID controller} and autopilot.}
-		\resumeItem{Interfaced with the customer to report progress, illicit new requirements, and gather feedback.}
-		\resumeItem{Used Python to scrape STANAG 4586 data structure definitions from a PDF and output C++ class files.}
-		\resumeItem{Maintained requirements document, software design diagrams, and user guide for the software.}
+		\resumeItem{Used Python to scrape STANAG 4586 data structure definitions from PDF format and output C++ class files.}
 		\resumeItem{Implemented Q-Learning in C++ to help a simulated commercial aircraft avoid airspace collisions.}
-
+		\resumeItem{Maintained requirements document, software design diagrams, and user guide for the software.}
+		\resumeItem{Programmed network socket to interface with third-party software in a distributed simulation environment.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -178,9 +177,8 @@ Alexander Alekseenko, \textbf{Jeffrey Limbacher}. \textit{Evaluating High Order 
   
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Programming}{Python, R, SQL, C++ (Qt), Fortran, MATLAB, C\#}
-    \resumeSubItem{Software}{Linux, \LaTeX , Git, JIRA, Excel, Office, Powerpoint}
-    
+    \resumeSubItem{Programming}{Python (pandas, pymc3), R (ggplot, tidyverse), SQL, C++ (Qt), Fortran (OpenMP, MPI), MATLAB, C\# (ASP.NET), Linux, Git, JIRA}
+    \resumeSubItem{Courses}{Software Engineering, Computer Network Software, Data Structures, Algorithms, Numerical Linear Algebra, Numerical PDEs, Statistics, Computational Statistics}
   \resumeSubHeadingListEnd
 %
 %--------PROGRAMMING SKILLS------------
